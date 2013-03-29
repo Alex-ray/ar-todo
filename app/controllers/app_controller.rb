@@ -1,7 +1,7 @@
 class TodoController
 
   def display_all_tasks
-    task.find(:all)
+    Task.find(:all)
   end
 
   def display_all_completed
@@ -30,3 +30,5 @@ class TodoController
 
 end
 
+x = TodoController.new
+x.display_all_tasks
