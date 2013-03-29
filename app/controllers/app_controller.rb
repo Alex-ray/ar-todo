@@ -29,3 +29,5 @@ class TodoController < ActiveRecord::Base
   end
 end
 
+x = TodoController.new
+x.display_all_tasks
