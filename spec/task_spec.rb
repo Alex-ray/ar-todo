@@ -18,5 +18,4 @@ before(:all) do
 	it "should have a description method and a complete_at method " do
     [:name, :complete_at].each { |mthd| @task.should respond_to mthd }
   end
-
- 
+end
