@@ -1,32 +1,31 @@
-class TodoController
+class TodoController < ActiveRecord::Base
 
   def display_all_tasks
-    task.find(:all)
+    Task.find(:all)
   end
 
   def display_all_completed
-    task.find(complete)
+    Task.order.select(complete)
   end
 
   def display_all_uncompleted
-    task.find(uncompleted)
+    Task.order.select(incomplete)
   end
 
   def add_task(text)
-    task.create(:description => 'text')
+    Task.create(:description => 'text')
   end
 
   def delete_task(task_id)
-    task.find(task_id)
+    Task.find(task_id)
   end
 
   def mark_task_as_completed
-
+    # how do we mark a task as completed
   end
 
   def search
 
   end
-
 end
 
